@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem 4rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+
+  &.loaded {
+    border-color: rgba(0, 255, 128, 0.4);
+    box-shadow: 0 0 40px rgba(0, 255, 128, 0.1);
+  }
+
+  &.error {
+    border-color: rgba(255, 80, 80, 0.4);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #fff;
+  }
+
+  .sub {
+    margin-top: 1rem;
+    color: rgba(0, 255, 128, 0.8);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #555;
+  margin: 0 auto 1.5rem;
+  transition: background 0.4s ease;
+
+  &.active {
+    background: #00ff80;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.6);
+  }
+}

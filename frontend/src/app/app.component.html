@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="card" [class.loaded]="isLoaded" [class.error]="isError">
+    <div class="status-dot" [class.active]="isLoaded"></div>
+    <h1>{{ message }}</h1>
+    <p class="sub" *ngIf="isLoaded">Angular &harr; Express connection is live</p>
+  </div>
+</div>
